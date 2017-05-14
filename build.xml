@@ -1,0 +1,27 @@
+<!-- Build for weboshot. Pretty much the only purpose is to deploy the apache 
+    htdocs as defined in build.properties -->
+<project name="weboshot" default="deploy" basedir=".">
+ 
+ <property file="build.properties"></property>
+ 
+ <target name="deploy">
+ 
+     <delete dir="${full.deploy.path}" failonerror="false"></delete>
+ 
+     <copy todir="${full.deploy.path}">
+ 
+         <fileset dir=".">
+             <exclude name="**/test/**"></exclude>
+         </fileset>
+ 
+     </copy>
+ 	
+ 	  <exec executable="chmod" vmlauncher="true">
+ 	    <arg value="-R"/>
+ 	    <arg value="777"/>
+ 	    <arg value="${full.deploy.path}"/>
+ 	  </exec>
+ 
+ </target>
+ 
+</project>

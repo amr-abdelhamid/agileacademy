@@ -1,0 +1,10 @@
+.header-titles h2 {display:none;}
+#page_header.zn_def_header_style {min-height:100px;}
+#page_header.zn_header_bottom_style {height:0px; background:none}
+div.zn_header_bottom_style {height:0;}
+.span6 {display:none;}
+#page_header.zn_def_header_style .zn_header_bottom_style, #slideshow.zn_def_header_style .zn_header_bottom_style {visibility:hidden}
+.tribe-events-list-separator-month span {
+    background-color: #f8f8f8;
+	padding: 0 7.5%;
+}
